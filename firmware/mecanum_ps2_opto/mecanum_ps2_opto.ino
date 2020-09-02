@@ -86,24 +86,32 @@ void setup() {
   // тест моторов
 #if (MOTOR_TEST == 1)
   Serial.println("front left");
-  motorFL.run(FORWARD, 100);
+  motorFL.setMode(AUTO);
+  motorFL.setSpeed(255);
   delay(3000);
-  motorFL.run(STOP);
+  motorFL.setSpeed(0);
+  motorFL.setMode(STOP);
   delay(1000);
   Serial.println("front right");
-  motorFR.run(FORWARD, 100);
+  motorFR.setMode(AUTO);
+  motorFR.setSpeed(255);
   delay(3000);
-  motorFR.run(STOP);
+  motorFR.setSpeed(0);
+  motorFR.setMode(STOP);
   delay(1000);
   Serial.println("back left");
-  motorBL.run(FORWARD, 100);
+  motorBL.setMode(AUTO);
+  motorBL.setSpeed(255);
   delay(3000);
-  motorBL.run(STOP);
+  motorBL.setSpeed(0);
+  motorBL.setMode(STOP);
   delay(1000);
   Serial.println("back right");
-  motorBR.run(FORWARD, 100);
+  motorBR.setMode(AUTO);
+  motorBR.setSpeed(255);
   delay(3000);
-  motorBR.run(STOP);
+  motorBR.setSpeed(0);
+  motorBR.setMode(STOP);
 #endif
   // минимальный сигнал на мотор
   motorFR.setMinDuty(MIN_DUTY);
